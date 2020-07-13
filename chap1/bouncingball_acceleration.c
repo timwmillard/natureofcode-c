@@ -4,7 +4,7 @@
 #include <raymath.h>
 
 // Application Name
-#define APP_NAME "Nature of Code - Boucing Ball with Vectors"
+#define APP_NAME "Nature of Code - Boucing Ball with Acceleration"
 
 // Frames per second
 #define FPS 60

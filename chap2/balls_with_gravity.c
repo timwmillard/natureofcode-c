@@ -5,7 +5,7 @@
 #include "../core/body.h"
 
 // Application Name
-#define APP_NAME "Nature of Code - Ball with Mass"
+#define APP_NAME "Nature of Code - Balls with Gravity"
 
 // Frames per second
 #define FPS 60
@@ -42,7 +42,6 @@ int main(int argc, char *argv[])
 
    const int noBalls = 8;
    Body *balls[noBalls];
-   printf("RAND_MAX = %d\n", RAND_MAX);
    for (int i = 0; i < noBalls; i++) {
       float x = (i + 1) * screenWidth / (noBalls + 1);
       float y = screenHeight / 3;

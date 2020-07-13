@@ -6,7 +6,7 @@
 #include "../core/lib.h"
 
 // Application Name
-#define APP_NAME "Nature of Code - Ball with Mass"
+#define APP_NAME "Nature of Code - Ball with Wind"
 
 // Frames per second
 #define FPS 60

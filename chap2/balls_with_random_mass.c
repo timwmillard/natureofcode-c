@@ -5,7 +5,7 @@
 #include "../core/body.h"
 
 // Application Name
-#define APP_NAME "Nature of Code - Ball with Mass"
+#define APP_NAME "Nature of Code - Balls with Mass"
 
 // Frames per second
 #define FPS 60
