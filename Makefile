@@ -8,6 +8,8 @@ CFLAGS:=$(shell pkg-config raylib --cflags)
 CFLAGS+= -std=c99
 #INCLUDE=
 
+FRAMEWORK= -framework IOKit -framework Cocoa -framework OpenGL
+
 #SRC:=$(wildcard src/*.c)
 #OBJ:=$(SRC:src/%.c=obj/%.o)
 #INC:=$(wildcard include/*.h)
@@ -27,7 +29,6 @@ INTRO = \
 	intro/perlin_noise_2d \
 
 CHAP1 = \
-	chap1/vectors \
 	chap1/bouncingball_novectors \
 	chap1/bouncingball_vectors \
 	chap1/bouncingball_acceleration \
@@ -52,7 +53,7 @@ chap1: $(CHAP1)
 chap2: $(CHAP2)
 
 %: %.c
-	$(CC) -o $@$(EXT) $(CORE) $< $(CFLAGS) $(INCLUDE) $(LDFLAGS) $(LDLIBS)
+	$(CC) -o $@$(EXT) $(CORE) $< $(FRAMEWORK) $(CFLAGS) $(INCLUDE) $(LDFLAGS) $(LDLIBS)
 
 #$(OBJ): obj/%.o : src/%.c
 #	$(CC) -o $@$(EXT) $< $(CFLAGS) $(INCLUDE) $(LDFLAGS) $(LDLIBS)
