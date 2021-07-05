@@ -3,6 +3,7 @@
 #include <time.h>
 #include <string.h>
 #include <raylib.h>
+#include "raylib_dep.h"
 #include "../core/noise.h"
 #include "../core/lib.h"
 
@@ -42,7 +43,7 @@ int main(int argc, char *argv[])
       xoff += 0.01;
    }
 
-   Image image = LoadImageEx((Color *)&colorMap, screenWidth, screenHeight);
+   Image image = LoadImageEx_DEP((Color *)&colorMap, screenWidth, screenHeight);
    Texture2D texture = LoadTextureFromImage(image);
    UnloadImage(image);
 
