@@ -3,6 +3,7 @@
 #include <time.h>
 #include <string.h>
 #include <raylib.h>
+#include "raylib_dep.h"
 #include "../core/lib.h"
 
 // Application Name
@@ -11,6 +12,7 @@
 // Frames per second
 #define FPS 60
 
+Image LoadImageEx_DEP(Color *pixels, int width, int height);
 
 int main(int argc, char *argv[])
 {
@@ -35,7 +37,7 @@ int main(int argc, char *argv[])
       }
    }
 
-   Image image = LoadImageEx((Color *)&colorMap, screenWidth, screenHeight);
+   Image image = LoadImageEx_DEP((Color *)&colorMap, screenWidth, screenHeight);
    Texture2D texture = LoadTextureFromImage(image);
    UnloadImage(image);
 
